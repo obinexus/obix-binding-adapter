@@ -1,0 +1,48 @@
+{
+  "name": "obix-binding-adapter",
+  "version": "0.5.0",
+  "description": "OBIX DP Adapter - data-oriented paradigm translation layer",
+  "license": "MIT",
+  "author": "OBINexus <okpalan@protonmail.com>",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE",
+    "__tests__",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "obix"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obinexus/obix-binding-adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/obinexus/obix-binding-adapter/issues"
+  },
+  "homepage": "https://github.com/obinexus/obix-binding-adapter#readme"
+}

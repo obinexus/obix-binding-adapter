@@ -1,0 +1,80 @@
+{
+  "package": "obix-binding-adapter",
+  "dir": "binding/obix-binding-adapter",
+  "importedBy": "scripts/recovery/import-packages.mjs",
+  "snapshot": "snap-20260924T142414Z",
+  "stage": "stage-2 lift-and-shift (base owner; later stages repair/merge)",
+  "sources": [
+    {
+      "label": "upstream:obix-sdk@1269cfa",
+      "repo": "obix-sdk",
+      "url": "https://github.com/obinexusmk2/obix-sdk",
+      "sha": "1269cfab705cf2b3bb2b2d10d0c149b0760cca2b",
+      "path": "obix-sdk/packages/sdk/obix-adapter",
+      "license": "MIT",
+      "licenseFileUpstream": false,
+      "filesImported": 8,
+      "filesExcluded": 19
+    }
+  ],
+  "originalManifest": {
+    "name": "@obinexusltd/obix-adapter",
+    "version": "0.1.0",
+    "license": "MIT",
+    "bin": null,
+    "scripts": {
+      "build": "tsc",
+      "test": "vitest run",
+      "test:watch": "vitest"
+    }
+  },
+  "transforms": [
+    "package.json regenerated (lockstep version, exact internal pins, exports with \"types\" first, standard scripts)",
+    "tsconfig.json generated (NodeNext via tsconfig.base.json)",
+    "internal specifiers renamed: none",
+    "relative imports given \".js\"/\"/index.js\" extensions: 8",
+    "dependencies dropped: @obinexusltd/obix-core-runtime (declared in peerDependencies, never imported)",
+    "LICENSE generated from the declared MIT license (upstream repo had no LICENSE file)"
+  ],
+  "localFixes": [
+    {
+      "stage": "naming-migration",
+      "files": [
+        "README.md"
+      ],
+      "why": "D-41: the README told consumers to install @obinexusltd/obix-adapter, a name that no longer resolves; it names @obinexusltd/obix-binding-adapter."
+    }
+  ],
+  "scopeScrub": {
+    "rule": "scripts/recovery/scrub-rules.mjs (brief: no other OBINexus projects)",
+    "replacementsPerFile": {}
+  },
+  "authoredOverlay": [],
+  "excluded": [
+    "dist/**",
+    "node_modules/**",
+    "lockfiles",
+    "tsconfig*.json (regenerated)",
+    ".gitignore",
+    ".github/**",
+    "coverage/**"
+  ],
+  "unresolvedRelativeImports": [],
+  "note": null,
+  "renamedFrom": [
+    {
+      "name": "@obinexusltd/obix-binding-adapter",
+      "dir": "binding/obix-binding-adapter",
+      "stage": "unscoped-naming",
+      "why": "D-102 (2026-09-29): OBIX packages are named without an npm scope — previous name @obinexusltd/obix-binding-adapter, current name obix-binding-adapter (docs/recovery/unscoped-migration.md); the directory, version and exports are unchanged"
+    }
+  ],
+  "export": {
+    "from": "https://github.com/obinexusmk2/obix-monorepo",
+    "branch": "recovery/obix-api-preserving-rebuild",
+    "commit": "69cafc94910c1add865a520877617ac307668875",
+    "directory": "binding/obix-binding-adapter",
+    "exportedBy": "scripts/release/export-repos.mjs",
+    "note": "a clean initial commit of this package; the monorepo history is not imported (D-103). Local machine paths in this record are replaced by <local workspace>."
+  }
+}
